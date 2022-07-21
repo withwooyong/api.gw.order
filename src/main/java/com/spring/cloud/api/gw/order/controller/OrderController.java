@@ -17,9 +17,10 @@ public class OrderController {
 
     private final OrderService orderService;
 
-    @GetMapping(path = "/")
+    @GetMapping
     ResponseEntity<String> getHello() {
-        return ResponseEntity.ok("order hello");
+        String hello = orderService.getHello();
+        return ResponseEntity.ok(hello);
     }
 
     /**
